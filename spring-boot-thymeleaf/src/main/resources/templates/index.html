@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Thymeleaf - HoangTD5</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link th:href="@{/css/bootstrap.min.css}">
+
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<h1 th:utext="#{label.index.h1}"></h1>
+
+<h2> Profile </h2>
+
+<ul>
+    <li th:each="info: ${infos}">
+        <span th:text="*{info.key}"></span> : <span th:text="*{info.value}"></span>
+    </li>
+</ul>
+
+<a th:href="@{/get-todo-list}" class="btn btn-primary">Danh sách công việc</a><br/>
+<a th:href="@{/add-todo-list}" class="btn btn-primary">Thêm công việc</a><br/>
+</body>
+</html>
