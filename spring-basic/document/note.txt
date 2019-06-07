@@ -1,0 +1,57 @@
+1. @Component & @Autowired
+- @Component: một chú thích đánh dấu trên class để Spring biết nó là một bean. Từ đó khởi tạo và đẩy vào application
+    context để quản lý
+- Các Bean được tạo trong application context đều là singleton. Muốn khởi tạo lại khi gọi tới nó thì cần thêm chú thích
+    @Scope("prototype")
+- @Autowired: Chú thích này sẽ ns cho Spring boot hãy tự inject một instance vào thuộc tính này khi khởi tạo.
+
+2. @Autowired & @Primary & @Qualifier
+
+- Quá trình inject Bean xảy ra như sau
+ + Nếu class không có hàm contructor hay Getter. Thì sẽ sử dụng Java Reflection để đưa đối tượng vào thuộc tính có đánh dấu @Auto...
+ + Nếu hàm có Contructor thì sẽ inject bean với tham số của hàm
+ + Nếu có hàm Setter thì sẽ inject bean với tham số của hàm
+- Vấn đề của @Autowired là khi có 2 Bean cùng loại trong context dẫn tới lúc inject không biết chọn Bean nào.
+ + C1: Sử dụng @Primary để giải quyết vấn đề này. Nó sẽ ưu tiên những class có chú thích này.
+ + C2: @Qualifier("XXX"): Định nghĩa name của bean ứng với bean được định nghĩa trong @Component("XXX")
+ + C3: Có thể sử dụng @Bean và @Qualifier = @PersonQ để định nghĩa bean trong @Configuration
+
+3. Spring Bean Life Cycle + @PostConstruct và @PreDestroy
+- Vòng đời của Bean
+
+- @PostConstruct: Được đánh dấu trên một method duy nhất trong Bean. IOC Container hoặc application context sẽ gọi hàm này
+    ngay sau khi một Bean được tạo và quản lý.
+
+- @PreDestroy: được đánh dấu trên một method duy nhất bên trong Bean.
+    IoC Container hoặc ApplicationContext sẽ gọi hàm này trước khi một Bean bị xóa hoặc không được quản lý nữa.
+
+- #Bean Life Cycle
+    b1 IOC Container(ApplicationContext) tìm thấy một Bean cẩn quản lý, nó sẽ khởi tạo contructor.
+    b2 Inject dependencies vào Bean bằng Setter, và thục hiện quá trình cài đặt khác...
+    b3 Hàm đánh dấu @PostConstructor
+    b4 Tiền xử lý sau khi thưc hiện b3
+    b5 Bean sãn sàng hoạt động
+    b6 Nếu IOC Container không quản lý Bean nữa hoặc Shutdown thì nó sẽ gọi hàm @PreDestroy trong Bean
+    b7 Xóa bean
+- @PostConstruct và @PreDestroy là 2 Annotation cực kỳ ý nghĩa, nếu bạn nắm được vòng đời của một Bean,
+    bạn có thể tận dụng nó để làm các nhiệm vụ riêng như setting, thêm giá trị mặc định trong thuộc tính sau khi tạo,
+    xóa dữ liệu trước khi xóa, v.v..
+    Rất nhiều chức năng khác tùy theo nhu cầu.
+4. @Controller & @Service & @Repository
+
+- Dựa trên kiến trúc Spring MVC, xây dựng trên tư tưởng độc lập kết hợp vs các nguyên lý hướng đối tượng(Dependency Inversion)
+    Độc lập ở đây ám chỉ các layer phục vụ các mục đích nhất định, khi muốn thực hiện các nhiệm vụ ngoài phạm vi thì sẽ đưa sang các layer khác.
+
+- Consumer Layer:
+
+- Service Layer
+
+- Persistance Layer
+
+5. @ComponentScan hoặc @SpringBootApplication(scanBasePackages = "me.loda.spring.componentscan.others")
+
+- Cho phép quét thư mục chứa các component để khởi tạo Bean cho nó.
+
+6. @Configuration và @Bean
+- @Configuration là một Annotation đánh dấu tên Class cho phép SpringBoot biết đây là nơi định nghĩa các Bean.
+- @Bean là một Annotation được đánh dấu trên các method cho phép Springboot biết được đây là Bean và thực hiện đưa Bean này vào Context.
