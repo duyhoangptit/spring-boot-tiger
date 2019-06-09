@@ -1,14 +1,19 @@
 package vn.hoangptit.tiger.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import vn.hoangptit.tiger.service.TodoListService;
 
 @Controller
 @RequestMapping("todo-list")
 public class TodoController {
+
+    @Autowired
+    private TodoListService todoListService;
 
     @GetMapping("/add-todo")
     public String addTodoList(Model model) {

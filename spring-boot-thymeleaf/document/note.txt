@@ -7,3 +7,44 @@
     + @{...}: Lấy đường dẫn URL dựa theo context của server
 
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_todo
+
+2. HikariCP là JDBC connection pool có hiệu năng cao, rất nhẹ (chỉ khoảng 130kb),
+    được phát triển bởi Brett Wooldridge (năm 2012) và vẫn đang được cập nhật liên tục.
+
+    HikariCP có nhiều tính năng mà chính tác giả cũng đã ca ngợi:
+
+       Kiểm tra các kết nối tại chính method getConnection()
+       Đóng gói các internal pool query (bao gồm test query và initSQL query) trong transaction của chúng
+       Theo dõi và đóng các đối tượng Statement (đã hết sử dụng) tại Connection.close()
+       Thực hiện rollback() trên các Connection được trả về trong pool
+       Xóa SQL warning trước khi trả một Connection về cho client
+       Thiết lập mặc định auto-commit, mức cô lập cho transaction, catalog và trạng thái chỉ đọc (read-only)
+       Kiểm tra các đối tượng SQLException để tìm ra các lỗi mất kết nối
+
+3. H2database
+https://viblo.asia/p/spring-boot-angularjs-spring-data-jpa-crud-app-example-3Q75wD8QKWb
+https://o7planning.org/vi/11895/cai-dat-co-so-du-lieu-h2-va-su-dung-h2-console
+
+4. Config JPA
+
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>5.1.6</version>
+</dependency>
+
+Version 5.1.6 thì đi vs config hibernate
+    spring.datasource.config.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+và
+    spring.datasource.config.driverClassName=com.mysql.jdbc.Driver
+
+Nếu là bản
+<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.13</version>
+</dependency>
+
+thì đi với config hibernate
+    spring.datasource.config.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
