@@ -48,3 +48,7 @@ Nếu là bản
 
 thì đi với config hibernate
     spring.datasource.config.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+vả
+    spring.datasource.config.url=jdbc:mysql://localhost:3306/db_todo_list?useLegacyDatetimeCode=false&serverTimezone=UTC
+và
+    spring.datasource.config.driverClassName=com.mysql.cj.jdbc.Driver

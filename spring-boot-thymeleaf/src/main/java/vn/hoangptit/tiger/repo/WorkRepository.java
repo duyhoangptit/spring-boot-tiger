@@ -11,5 +11,5 @@ import vn.hoangptit.tiger.model.Work;
  * @since 6/7/2019
  */
 @Repository
-public interface WorkRepository extends JpaRepository<Work, Long> {
+public interface WorkRepository extends WorkTodoCustom, JpaRepository<Work, Long> {
 }

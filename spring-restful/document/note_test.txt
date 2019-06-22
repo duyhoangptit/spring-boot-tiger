@@ -1,0 +1,10 @@
+1. Thục hiện Junit in spring boot with JUnit & Mockito.
+------- @RunWith(SpringRunner.class) -> Khi chạy sẽ tạo ra context để chứa các bean, từ đó ta có thể @Autowired.
+
+# @SpringBootTest: Sẽ tìm tới class có gắn @SpringBootApplication và từ đó tìm toàn bộ Bean nạp vào Context.
+****: Lưu ý: Cách nào chỉ nên sử dụng khi chạy  Integration Tests. Vì việc chạy như này sẽ tạo ra toàn bộ Bean, chậm chương trình,
+    create ra Bean thừa thãi...
+
+# @TestConfiguration: Tương đương với @Configuration nhưng chỉ tồn tại trong môi trường Test.
+
+# @MockBean: Tạo ra đối tượng Bean giả bất chấp sự có mặt của @Bean thật.

@@ -18,7 +18,6 @@ import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
-import org.springframework.stereotype.Component;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -50,6 +49,8 @@ public class JpaConfiguration {
 
     @Value("${spring.datasource.config.maxPoolSize}")
     private int maxPoolSize;
+
+    private static final String DEFAULT_PERSISTECE_UNIT = "maria";
 
     /*
      * Populate SpringBoot DataSourceProperties object directly from application.yml
@@ -94,6 +95,7 @@ public class JpaConfiguration {
 
         factoryBean.setDataSource(datasource());
         factoryBean.setPackagesToScan(new String[]{"vn.hoangptit.tiger.model"});
+        factoryBean.setPersistenceUnitName(DEFAULT_PERSISTECE_UNIT);
         factoryBean.setJpaVendorAdapter(jpaVendorAdapter());
         factoryBean.setJpaProperties(jpaProperties());
 

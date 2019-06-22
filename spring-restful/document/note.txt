@@ -1,0 +1,49 @@
+1. ExceptionHandling, ExceptionHandler
+
+2. RestControllerAdvice, Controller Advice, ResponseStatus
+- @RestControllerAdvice là một Annotation gắn trên Class. Có tác dụng xen vào quá trình xử lý của các @RestController
+    tương tự như @ControllerAdvice.
+- @RestControllerAdvice thường được kết hợp với @ExceptionHandler để cắt ngang quá trình xử lý của Controller và
+    xử lý ngoại lệ xảy ra.
+
+- @ControllerAdvice: Xử lý và handler những exception xảy ra trên @Controller
+
+- Xử dụng Class có annotation @RestControllerAdvice để handler những exception xảy ra và định nghĩa message cho các message đó.
+
+- Inject biến bằng contructor: @RequiredArgsConstructor(onConstructor = @_(@Autowired))
+
+
+3. Cách lấy config in file properties.
+
+@Component
+@PropertySource("classpath:application.properties")
+@ConfigurationProperties(prefix = "datasource")
+
+4. Khái niệm auditing
+- Là việc theo dõi và logging các sự kiện liên quan tới việc create, update item trong DB.
+    Thường sẽ là 4 trường common:
+    - created_date
+    - created_user
+    - updated_date
+    _ updated_user
+- Để kích hoạt nó lên. Phải config trong Spring boot bằng cách enable nó lên
+    @EnableJpaAuditing
+
+- Cách hoạt động của auditing dựa trên hoạt động của @EntityListener: https://www.baeldung.com/database-auditing-jpa
+    Khi thực hiện một sự kiện insert, update vào entity trong DB thì nó cũng đồng thời phát ra một sự kiện. sự kiện này auditing đã tận dụng
+    để custom nó.
+
+    Chúng ta có annotation @EntityListeners để lắng nghe sự kiện liên quan tới entity.
+    --------------------------------
+    // Bạn phải đánh dấu class bởi @EntityListeners(AuditingEntityListener.class)
+    // Đây là Một đối tượng Listener, lắng nghe sự kiện insert hoặc update của đối tượng
+    // Để từ đó tự động cập nhật các trường @CreatedDate và @LastModifiedDate
+    @EntityListeners(AuditingEntityListener.class)
+
+    --------------------------------
+    // Thực hiện set và update đối tượng thực hiện action đó in spring security.
+    @CreatedBy
+    @LastModifiedBy
+
+
+

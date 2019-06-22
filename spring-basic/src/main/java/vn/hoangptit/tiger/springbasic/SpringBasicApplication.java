@@ -12,6 +12,10 @@ import vn.hoangptit.tiger.model.Laptop;
 import vn.hoangptit.tiger.model.SimpleBean;
 import vn.hoangptit.tiger.service.LaptopService;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 @ComponentScan("vn.hoangptit.tiger")
 @SpringBootApplication
 public class SpringBasicApplication {
@@ -63,6 +67,47 @@ public class SpringBasicApplication {
         DBConnector postgresConnector = context.getBean(PostgresConnector.class);
 
         postgresConnector.connect();
+
+        System.out.println("------------------------------------");
+        calculator();
     }
 
+    public static void calculator() {
+        List<Integer> arr = Arrays.asList(1, 3, 5, 7, 8, 9, 10);
+
+        List<Stock> stocks = new ArrayList<>();
+        int from = arr.get(0);
+        Stock stock = new Stock();
+        stock.fromSerial = from;
+
+        for (int i = 1; i < arr.size() + 1; i++) {
+            if (i == arr.size()) {
+                stock.toSerial = from;
+                stocks.add(stock);
+                break;
+            }
+
+            if (arr.get(i) - 1 > from) {
+                stock.toSerial = from;
+                stocks.add(stock);
+                stock = new Stock();
+                stock.fromSerial = arr.get(i);
+            }
+
+            from = arr.get(i);
+        }
+
+        stocks.forEach(item -> item.disp());
+    }
+
+    private static class Stock {
+        public int fromSerial;
+        public int toSerial;
+
+        public void disp() {
+            System.out.println(fromSerial + "-" + toSerial);
+        }
+    }
 }
+
+
