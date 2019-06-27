@@ -1,4 +1,4 @@
-package vn.hoangptit.tiger.api;
+package vn.hoangptit.tiger.handler;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;

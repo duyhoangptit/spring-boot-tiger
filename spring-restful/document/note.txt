@@ -45,5 +45,24 @@
     @CreatedBy
     @LastModifiedBy
 
+# Spring boot swagger
+
+1. Dependency
+<!--spring swagger-->
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger2</artifactId>
+    <version>2.9.2</version>
+</dependency>
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger-ui</artifactId>
+    <version>2.9.2</version>
+</dependency>
+
+2. Enable Swagger In Config
+    @EnableSwagger2
+3. Create Bean Docket
+
 
 
