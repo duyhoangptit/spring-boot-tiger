@@ -32,3 +32,13 @@
     + Vậy chúng ta cần định nghĩa toàn bộ các dependency trước rồi để nó vào một cái kho(container).
     + Vậy Invertion of control sinh ra để làm nhiệm vụ này. Nó sẽ hoạt động theo một khung dựng sẵn chứ không để cho 
     hệ thống kiểm sát.(Spring framework và Google guice).
+
+
+# Interface
+- Các đặc điểm của interface
+    + You cannot instantiate an interface.
+    + An interface does not contain any constructors.
+    + All of the methods in an interface are abstract.
+    + An interface cannot contain instance fields. The only fields that can appear in an interface must be declared both static and final.
+    + An interface is not extended by a class; it is implemented by a class.
+    + An interface can extend multiple interfaces.

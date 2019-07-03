@@ -138,6 +138,9 @@ public class JpaConfiguration {
         return txtManager;
     }
 
+    /**
+     * Config spring auditing
+     */
     @Bean
     AuditorAware<String> auditorProvider() {
         return new AuditorAwareImpl();
