@@ -12,8 +12,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import vn.hoangptit.tiger.core.jwt.JwtAuthenticationFilter;
-import vn.hoangptit.tiger.core.service.UserService;
+import vn.hoangptit.tiger.core.config.jwt.JwtAuthenticationFilter;
+import vn.hoangptit.tiger.core.authen.service.UserService;
 
 /**
  * Create file WebSecurityConfig

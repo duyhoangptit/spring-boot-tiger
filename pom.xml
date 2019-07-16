@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>vn.hoangptit.tiger</groupId>
-	<artifactId>SpringTiger</artifactId>
+	<artifactId>spring-boot-tiger</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpringTiger</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Study spring boot</description>
 
 	<modules>
 		<module>spring-basic</module>
@@ -26,15 +26,6 @@
 	</properties>
 
 	<dependencyManagement>
-		<dependencies>
-<!--			<dependency>-->
-<!--				<groupId>org.springframework.cloud</groupId>-->
-<!--				<artifactId>spring-cloud-dependencies</artifactId>-->
-<!--				<version>${spring-cloud.version}</version>-->
-<!--				<type>pom</type>-->
-<!--				<scope>import</scope>-->
-<!--			</dependency>-->
-		</dependencies>
 	</dependencyManagement>
 
 	<build>

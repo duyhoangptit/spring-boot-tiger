@@ -42,3 +42,42 @@
     + An interface cannot contain instance fields. The only fields that can appear in an interface must be declared both static and final.
     + An interface is not extended by a class; it is implemented by a class.
     + An interface can extend multiple interfaces.
+    
+# SOAP & REST
+
+1. SOAP (Simple Object Access Protocol)
+    - SOAP: XML, HTTP
+    + là `giao thức` truy cập WebServices được sử dụng trong một thời gian và hưởng tất cả các lợi ích của việc sử dụng lâu dài.
+    + SOAP thì `không thể sử dụng rest` bởi vì nó là một giao thức
+    + SOAP cung cấp các `giao diện dịch vụ` cho các thành phần bên ngoài sử dụng.
+    + SOAP định nghĩa các` chuẩn riêng, quy tắc nghiêm ngặt`.
+    + SOAP định nghĩa `chuẩn bảo mật riêng nó`
+    + SOAP chỉ hỗ trợ `định dạng dữ liệu là XML`
+    + SOAP Ít người sử dụng hơn REST
+    + Được thiết kế trong môi `trường tính toán phân tán`.
+    + Tin cậy hơn dùng REST
+    + Hỗ trợ hầu hết các `chuẩn bảo mật, tin cậy và giao dịch`
+    + SOAP hỗ trợ 2 giao thức: SMTP, HTTP
+    
+    *** Ưu điểm
+    + Sử dụng ngôn ngữ, nền tảng, phương tiện độc lập(Rest yêu cầu sử dụng giao thức http)
+    + Hoạt động tốt trong các môi trường doanh nghiệp
+    + Tiêu chuẩn hóa
+    + Cung cấp khả năng mở rộng
+    + Tích hợp xử lý lỗi
+    + Tự động hóa khi sử dụng với
+
+2. Rest (Representational State Transfer)
+    + Là một cách thiết kế kiến trúc.
+    + Rest có thẻ sử dụng WS sử dụng SOAP vì nó có thể sử dụng bất kỳ giao thức nào như http, SOAP
+    + Sử dụng URI đẻ cung cấp các dịch vụ.
+    + Không có các tiêu chuẩn như SOAP
+    + Kế thừa chuẩn bảo mật tầng vận tải của giao thức mạng.
+    + Định dạng dữ liệu đa dạng: XML, JSON, TEXT, HTML
+    + Thường k áp dụng trong môi trường phân tán.
+    + Ít tin cậy hơn nếu người dùng không kiểm soát nó. Ví dụ http delete có thể trả về ok ngay cả khi ko delete được dữ liệu.
+    + Các phương thức DELETE và PUT thường bị vô hiệu hóa bởi tường lửa hoặc vấn đề bảo mật
+    + Gắn với giao thức HTTP.
+    
+    - JSON, PO_XML, RSS/ ATOM, HTTP
+    - Có 5 hình thái trên Rest: GET, POST, PUT, DELETE, PATCH
