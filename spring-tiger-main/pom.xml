@@ -11,7 +11,7 @@
     <groupId>vn.hoangptit.tiger.dashboard</groupId>
     <artifactId>spring-tiger</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-tiger</name>
+    <name>spring-tiger-main</name>
     <description>Spring dashboard duyhoangptit</description>
 
     <properties>
