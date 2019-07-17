@@ -1,4 +1,4 @@
-package vn.hoangptit.tiger.dashboard.domain.helper;
+package vn.hoangptit.tiger.dashboard.helper;
 
 /**
  * Create file LogicException

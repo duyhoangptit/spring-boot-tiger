@@ -1,6 +1,6 @@
-package vn.hoangptit.tiger.dashboard.domain.repo.impl;
+package vn.hoangptit.tiger.dashboard.dao.impl;
 
-import vn.hoangptit.tiger.dashboard.domain.repo.UserRepositoryCustom;
+import vn.hoangptit.tiger.dashboard.dao.UserRepositoryCustom;
 
 /**
  * Create file UserRepositoryImpl

@@ -1,4 +1,4 @@
-package vn.hoangptit.tiger.dashboard.domain.util;
+package vn.hoangptit.tiger.dashboard.util;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.i18n.LocaleContextHolder;

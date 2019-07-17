@@ -1,11 +1,11 @@
-package vn.hoangptit.tiger.dashboard.domain.util;
+package vn.hoangptit.tiger.dashboard.util;
 
 import com.google.common.collect.Maps;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.i18n.LocaleContextHolder;
-import vn.hoangptit.tiger.dashboard.domain.bundle.UTF8ResourceBundle;
-import vn.hoangptit.tiger.dashboard.domain.common.Locate;
+import vn.hoangptit.tiger.dashboard.bundle.UTF8ResourceBundle;
+import vn.hoangptit.tiger.dashboard.common.Locate;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;

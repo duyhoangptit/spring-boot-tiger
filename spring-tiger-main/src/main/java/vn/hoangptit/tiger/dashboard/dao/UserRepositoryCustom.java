@@ -1,4 +1,4 @@
-package vn.hoangptit.tiger.dashboard.domain.repo;
+package vn.hoangptit.tiger.dashboard.dao;
 
 /**
  * Create file UserRepositoryCustom

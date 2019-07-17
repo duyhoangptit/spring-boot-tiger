@@ -1,4 +1,4 @@
-package vn.hoangptit.tiger.dashboard.domain.bundle;
+package vn.hoangptit.tiger.dashboard.bundle;
 
 
 import java.io.IOException;

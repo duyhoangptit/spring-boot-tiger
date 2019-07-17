@@ -1,9 +1,9 @@
-package vn.hoangptit.tiger.dashboard.domain.repo;
+package vn.hoangptit.tiger.dashboard.dao;
 
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import vn.hoangptit.tiger.dashboard.domain.entities.UserEntity;
+import vn.hoangptit.tiger.dashboard.entities.UserEntity;
 
 import java.util.List;
 

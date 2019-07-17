@@ -1,4 +1,4 @@
-package vn.hoangptit.tiger.dashboard.domain.entities;
+package vn.hoangptit.tiger.dashboard.entities;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package vn.hoangptit.tiger.dashboard.domain.common;
+package vn.hoangptit.tiger.dashboard.common;
 
 /**
  * Create file Const

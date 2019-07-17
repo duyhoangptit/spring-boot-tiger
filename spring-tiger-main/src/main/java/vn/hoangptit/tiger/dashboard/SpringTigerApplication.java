@@ -1,4 +1,4 @@
-package vn.hoangptit.tiger.dashboard.domain;
+package vn.hoangptit.tiger.dashboard;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

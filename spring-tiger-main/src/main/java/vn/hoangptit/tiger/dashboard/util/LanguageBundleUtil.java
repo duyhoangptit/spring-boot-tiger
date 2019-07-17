@@ -1,8 +1,8 @@
-package vn.hoangptit.tiger.dashboard.domain.util;
+package vn.hoangptit.tiger.dashboard.util;
 
 
 
-import vn.hoangptit.tiger.dashboard.domain.common.Locate;
+import vn.hoangptit.tiger.dashboard.common.Locate;
 
 import java.text.MessageFormat;
 

@@ -1,11 +1,11 @@
-package vn.hoangptit.tiger.dashboard.domain.service.impl;
+package vn.hoangptit.tiger.dashboard.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
-import vn.hoangptit.tiger.dashboard.domain.entities.UserEntity;
-import vn.hoangptit.tiger.dashboard.domain.repo.UserRepository;
+import vn.hoangptit.tiger.dashboard.entities.UserEntity;
+import vn.hoangptit.tiger.dashboard.dao.UserRepository;
 
 import java.util.List;
 

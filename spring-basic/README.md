@@ -1,12 +1,40 @@
+# SOLID
+
+- Single Responsibility Principle(nguyên tắc)
+    `1 trong những nguyên lý thiết kế OOP. Là nguyên lý đơn trách nhiệm. Nội dung như sau:
+    Một class chỉ nên giữ một trách nhiệm duy nhất. Như vậy khi thay đổi requiment thì giúp chúng ta dễ dàng maintain hơn.
+    Tốn ít chi phí sửa chữa và bảo trì hơn.`
+
+- Open/Closed Principle
+    `Có thể thoải mái mở rộng 1 module, nhưng hạn chế sửa đổi bên trong module đó. Cần kế thừa những phần sẵn có để mở rộng
+    thay vì update nó.`
+
+- Liskov substitution(thay thế) Principle
+    `Trong một chương trình, các object của class con có thể thay thế class cha mà không làm thay đổi tính đúng đắn của chương trình`
+
+- Interface Segregation(phân chia) Principle
+    `Thay vì dùng 1 interface lớn, ta nên tách thành nhiều interface nhỏ, với nhiều mục đích cụ thể.
+    Để thiết kế một hệ thống linh hoạt, dễ dàng thay đổi, các module của hệ thống nên giao tiếp thông qua interface.
+    Mỗi module sẽ gọi chức năng của module khác thông qua interface mà ko quan tâm tới implementation bên dưới`
+    
+- Dependency inversion Principle
+    1. Các module cấp cao không nên phụ thuộc vào các module cấp thấp. Cả 2 nên phụ thuộc vào abstraction
+    
+    2. Interface (abstraction) không nên phụ thuộc vào chi tiết, mà ngược lại. Các class giao tiếp với nhau thông qua interface,
+    không phải thông qua implementation.
+    
+    `Pattern Dependency Injection để đảm bảo nguyên lý dependency inversion principle` 
+
+
 # Tight coupling & loosely coupled
 
  1. Tight coupling
 
-- Liên kết chặt chẽ.
+    - Liên kết chặt chẽ.
 
  2. Loosely coupled
  
- - Liên kết lỏng lẻo hơn.
+    - Liên kết lỏng lẻo hơn.
  
  
 # Dependency injection
@@ -81,3 +109,14 @@
     
     - JSON, PO_XML, RSS/ ATOM, HTTP
     - Có 5 hình thái trên Rest: GET, POST, PUT, DELETE, PATCH
+    
+# Autowiring trong Spring, annotation @Autowired trong Spring, các kiểu autowiring
+
+1. Các loại Auto-wiring trong Spring
+
+- Có 5 loại Auto-wiring
+    + Auto-wiring ‘no’
+    + Auto-wiring ‘byName’
+    + Auto-wiring ‘byType’
+    + Auto-Wiring ‘constructor’
+    + Auto-Wiring ‘autodetect’ -> từ spring 3 đã bỏ autodetect

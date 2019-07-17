@@ -17,7 +17,7 @@ import javax.annotation.PostConstruct;
 public class DataSourceConfig {
     // inject bởi RequiredArgsConstructor. Có hay ko onConstructor = @_(@Autowired) cũng k quan trọng, chỉ làm rõ ràng
     // hơn về việc cách inject mà thôi.
-    // inject repo
+    // inject dao
 
     @PostConstruct
     public void initData() {

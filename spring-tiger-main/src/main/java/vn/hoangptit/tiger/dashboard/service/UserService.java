@@ -1,4 +1,4 @@
-package vn.hoangptit.tiger.dashboard.domain.service;
+package vn.hoangptit.tiger.dashboard.service;
 
 /**
  * Create file UserService
