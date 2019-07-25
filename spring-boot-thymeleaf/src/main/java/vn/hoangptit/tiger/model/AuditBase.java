@@ -13,10 +13,10 @@ import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-@MappedSuperclass
 @Data
+@MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-public abstract class BaseModel implements Serializable {
+public abstract class AuditBase implements Serializable {
     @Column(name = "created_user", nullable = false, updatable = false)
     @CreatedBy
     private String createdUser;

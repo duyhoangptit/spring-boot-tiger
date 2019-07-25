@@ -2,14 +2,14 @@ package vn.hoangptit.tiger.repo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import vn.hoangptit.tiger.model.TodoList;
+import vn.hoangptit.tiger.model.Work;
 
 /**
- * Create file TodoListRepository
+ * Create file WorkRepositoryRepo
  *
  * @author duyhoangptit
  * @since 6/7/2019
  */
 @Repository
-public interface TodoListRepository extends JpaRepository<TodoList, Long> {
+public interface WorkRepo extends WorkTodoRepoCustom, JpaRepository<Work, Long> {
 }

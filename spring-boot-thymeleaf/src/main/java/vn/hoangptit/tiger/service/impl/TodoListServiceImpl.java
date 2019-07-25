@@ -5,8 +5,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import vn.hoangptit.tiger.dto.TodoListDTO;
 import vn.hoangptit.tiger.dto.WorkDTO;
-import vn.hoangptit.tiger.repo.TodoListRepository;
-import vn.hoangptit.tiger.repo.WorkRepository;
+import vn.hoangptit.tiger.repo.TodoListRepo;
+import vn.hoangptit.tiger.repo.WorkRepo;
 import vn.hoangptit.tiger.service.TodoListService;
 
 import java.util.List;
@@ -22,10 +22,10 @@ import java.util.List;
 public class TodoListServiceImpl implements TodoListService {
 
     @Autowired
-    private TodoListRepository todoListRepository;
+    private TodoListRepo todoListRepository;
 
     @Autowired
-    private WorkRepository workRepository;
+    private WorkRepo workRepository;
 
     @Override
     public void addTodoList(TodoListDTO todoListDTO) {

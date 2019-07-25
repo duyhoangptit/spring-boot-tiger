@@ -34,7 +34,7 @@ import java.util.Properties;
 
 // Spring Data @EnableJpaRepositories : Annotation enable JPA repositories. Nó sẽ scan xác định packages cho Spring Data repositories.
 // Spring Boot DataSourceProperties: là các class hữu dụng cho việc cấu hình data source.
-// Spring Boot DataSourceBuilder: là các builder, giúp mapping các properties datasource.
+// Spring Boot DataSourceBuilder: là các builder, giúp mapping các properties dataSource.
 
 @Configuration
 @EnableJpaRepositories(basePackages = "vn.hoangptit.tiger.repo",
@@ -67,8 +67,8 @@ public class JpaConfiguration {
     /*
      * Configure HikariCP pooled DataSource.
      */
-    @Bean
-    public DataSource datasource() {
+    @Bean(name = {"dataSource"})
+    public DataSource dataSource() {
         DataSourceProperties dataSourceProperties = this.dataSourceProperties();
         HikariDataSource dataSource = DataSourceBuilder
                 .create(dataSourceProperties.getClassLoader())
@@ -93,7 +93,7 @@ public class JpaConfiguration {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
 
-        factoryBean.setDataSource(datasource());
+        factoryBean.setDataSource(dataSource());
         factoryBean.setPackagesToScan(new String[]{"vn.hoangptit.tiger.model"});
         factoryBean.setPersistenceUnitName(DEFAULT_PERSISTECE_UNIT);
         factoryBean.setJpaVendorAdapter(jpaVendorAdapter());

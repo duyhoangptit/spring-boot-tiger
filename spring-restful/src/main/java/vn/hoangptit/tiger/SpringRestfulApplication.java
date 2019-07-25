@@ -1,4 +1,4 @@
-package vn.hoangptit.tiger.domain;
+package vn.hoangptit.tiger;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

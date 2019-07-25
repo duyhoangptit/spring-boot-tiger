@@ -40,7 +40,7 @@ public class SystemArchitecture {
      * interface. This definition assumes that interfaces are placed in the
      * "service" package, and that implementation types are in sub-packages.
      *UserRepositoryCustom.java
-     * If you group service interfaces by functional area (for example,
+     * If you group service interPersonDTOMappingfaces by functional area (for example,
      * in packages com.xyz.someapp.abc.service and com.xyz.def.service) then
      * the pointcut expression "execution(* com.xyz.someapp..service.*.*(..))"
      * could be used instead.

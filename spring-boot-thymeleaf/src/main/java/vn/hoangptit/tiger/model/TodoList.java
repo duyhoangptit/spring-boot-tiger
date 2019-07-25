@@ -3,14 +3,13 @@ package vn.hoangptit.tiger.model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
-import vn.hoangptit.tiger.dto.WorkDTO;
 
 import javax.persistence.*;
 
 @Data
 @Entity
 @Table(name = "TBL_TODO_LIST")
-public class TodoList extends BaseModel {
+public class TodoList extends AuditBase {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "todo_list_id")

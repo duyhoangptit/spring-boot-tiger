@@ -1,13 +1,15 @@
 package vn.hoangptit.tiger.model;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
 
 @Data
+@Builder
 @Entity
 @Table(name = "TBL_USER")
-public class User extends BaseModel {
+public class User extends AuditBase {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
