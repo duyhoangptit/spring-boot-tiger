@@ -21,13 +21,21 @@ public class SpringBootThymeleafApplication {
         // insert data
         UserRepo userRepo = context.getBean(UserRepo.class);
 
-        User user = User.builder()
-                .email("tiger@gmail.com")
-                .username("tiger")
-                .password("123456")
-                .description("Thông tin user")
-                .build();
-        userRepo.save(user);
+        for (int i = 0; i < 10; i++) {
+            User user = User.builder()
+                    .email("tiger@gmail.com")
+                    .username("tiger")
+                    .password("123456")
+                    .description("Thông tin user")
+                    .build();
+
+            userRepo.save(user);
+        }
+
+        userRepo.findAll().forEach(user1 -> {
+            System.out.println(user1);
+        });
+
 
         System.out.println("DONE");
     }
