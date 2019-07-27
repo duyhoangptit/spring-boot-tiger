@@ -36,7 +36,6 @@ public class SpringBootThymeleafApplication {
             System.out.println(user1);
         });
 
-
         System.out.println("DONE");
     }
 

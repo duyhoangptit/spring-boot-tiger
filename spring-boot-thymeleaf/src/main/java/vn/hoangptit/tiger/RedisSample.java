@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
+import vn.hoangptit.tiger.service.PropertyServiceForJasyptStarter;
 
 /**
  * Create file RedisSample
@@ -17,6 +18,9 @@ public class RedisSample implements CommandLineRunner {
     @Autowired
     private RedisTemplate redisTemplate;
 
+    @Autowired
+    private PropertyServiceForJasyptStarter service;
+
     @Override
     public void run(String... args) throws Exception {
         // Set giá trị của key "loda" là "hello redis"
@@ -24,5 +28,7 @@ public class RedisSample implements CommandLineRunner {
 
         // In ra màn hình Giá trị của key "loda" trong Redis
         System.out.println("Value of key loda: " + redisTemplate.opsForValue().get("loda"));
+
+        System.out.println("Encrypted: " + this.service.getProperty());
     }
 }
