@@ -15,6 +15,7 @@ import org.springframework.context.annotation.Configuration;
  * @since 7/27/2019
  */
 @Configuration
+// enable config encrypt ENC in file properties
 @EnableEncryptableProperties
 public class ServiceConfiguration {
 

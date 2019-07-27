@@ -1,4 +1,4 @@
-package vn.hoangptit.tiger;
+package vn.hoangptit.tiger.runner;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -13,7 +13,7 @@ import vn.hoangptit.tiger.service.PropertyServiceForJasyptStarter;
  * @since 7/26/2019
  */
 @Component
-public class RedisSample implements CommandLineRunner {
+public class RedisRunner implements CommandLineRunner {
 
     @Autowired
     private RedisTemplate redisTemplate;
