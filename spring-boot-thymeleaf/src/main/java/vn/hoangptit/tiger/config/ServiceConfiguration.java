@@ -5,6 +5,8 @@ import com.ulisesbocchio.jasyptspringboot.annotation.EncryptablePropertySource;
 import org.jasypt.encryption.StringEncryptor;
 import org.jasypt.encryption.pbe.PooledPBEStringEncryptor;
 import org.jasypt.encryption.pbe.config.SimpleStringPBEConfig;
+import org.modelmapper.ModelMapper;
+import org.modelmapper.spi.Mapping;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -34,5 +36,10 @@ public class ServiceConfiguration {
         encryptor.setConfig(config);
 
         return encryptor;
+    }
+
+    @Bean
+    public ModelMapper modelMapper() {
+        return new ModelMapper();
     }
 }
