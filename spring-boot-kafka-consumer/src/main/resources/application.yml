@@ -1,0 +1,11 @@
+kafka:
+  boot:
+    server: localhost:9092
+  topic:
+    name: myTopic-kafkaSender
+  consumer:
+    group:
+      id: myTopic-group-id
+
+server:
+  port: 8082

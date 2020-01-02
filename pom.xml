@@ -1,40 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.5.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-	<groupId>vn.hoangptit.tiger</groupId>
-	<artifactId>spring-boot-tiger</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringTiger</name>
-	<description>Study spring boot</description>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.5.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>vn.hoangptit.tiger</groupId>
+    <artifactId>spring-boot-tiger</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>SpringTiger</name>
+    <description>Study spring boot</description>
 
-	<modules>
-		<module>spring-basic</module>
-		<module>spring-boot-thymeleaf</module>
-		<module>spring-restful</module>
-		<module>spring-tiger-main</module>
-	</modules>
+    <modules>
+        <module>spring-basic</module>
+        <module>spring-boot-thymeleaf</module>
+        <module>spring-restful</module>
+        <module>spring-tiger-main</module>
+        <module>spring-boot-kafka-consumer</module>
+        <module>spring-boot-kafka-producer</module>
+        <module>spring-config-server</module>
+        <module>spring-config-client</module>
+    </modules>
 
-	<properties>
-		<java.version>1.8</java.version>
-	</properties>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
 
-	<dependencyManagement>
-	</dependencyManagement>
+    <dependencyManagement>
+    </dependencyManagement>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

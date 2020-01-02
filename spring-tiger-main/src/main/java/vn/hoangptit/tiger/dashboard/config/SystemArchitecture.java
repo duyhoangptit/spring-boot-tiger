@@ -57,6 +57,6 @@ public class SystemArchitecture {
      * dao interface. This definition assumes that interfaces are placed in the
      * "dao" package, and that implementation types are in sub-packages.
      */
-    @Pointcut("execution(* vn.hoangptit.tiger.dashboard.service.dao.*.*(..))")
+    @Pointcut("execution(* vn.hoangptit.tiger.dashboard.dao.*.*(..))")
     public void dataAccessOperation() {}
 }

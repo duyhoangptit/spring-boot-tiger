@@ -1,6 +1,5 @@
 package vn.hoangptit.tiger.core.config.swagger;
 
-import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import springfox.documentation.service.ApiInfo;
 
